@@ -1,0 +1,35 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap:20px
+}
+
+.card {
+    width: 600px;
+    height: max-content;
+    padding: 20px;
+    box-shadow: 0px 0px 15px #0002;
+    border-radius: 8px;
+    text-align: center;
+    background-color: white;
+    display: block;
+}
+
+h4 {color:grey;margin-top:.5em}
+
+@media (prefers-color-scheme: dark) {
+    body {background-color: #222;color: white;}
+    
+    .card {
+        background-color: #444;
+        color: white;
+        box-shadow: 0px 0px 15px #fff2;
+    }
+}
