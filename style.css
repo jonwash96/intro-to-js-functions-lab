@@ -20,16 +20,21 @@ body {
     text-align: center;
     background-color: white;
     display: block;
+    span {color:#4a8;font-size:1.5em;}
 }
 
-h4 {color:grey;margin-top:.5em}
+h4 {color:grey;margin:2em 0 0 0;}
+h2 {font-size:1em;}
+.card p {font-family:monospace;}
 
 @media (prefers-color-scheme: dark) {
     body {background-color: #222;color: white;}
     
+    h4 {color:#acb;}
+
     .card {
-        background-color: #444;
+        background-color: #3a3f4a;
         color: white;
-        box-shadow: 0px 0px 15px #fff2;
+        box-shadow: 0px 0px 15px #0003;
     }
 }

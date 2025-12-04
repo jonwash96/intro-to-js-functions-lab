@@ -36,9 +36,9 @@ const greetUser = (fname,tod) => `Good ${tod}, ${fname}`;
 print(ex5,{title:"Greet User", input:"sam, morning", func:greetUser("sam", "morning"), proto:greetUser});
 
 // EXERCISE 6
-function maxOfThree(a,b,c) {
-    if (arguments.length > 3 ) {console.warn("WARNING! (at Exercise 6) too many argumen ss. Only the first 3 were evaluated.")};
-    return Math.max(a,b,c);
+function maxOfThree() {
+    if (arguments.length > 3 ) {console.warn("WARNING! (at Exercise 6) too many arguments. Only the first 3 were evaluated.")};
+    return Math.max(...Object.values(arguments));
 }
 print(ex6,{title:"Max of 3 Numbers", input:"5,10,8", func:maxOfThree(5,10,8), proto:maxOfThree});
 
@@ -79,7 +79,7 @@ function print(el,obj) {
     console.log(`Excercise ${ex} Result. ${obj.title}: `, obj.func);
 
     const headding = document.createElement('h2');
-        headding.innerHTML = `Excercise ${ex}<br> "${obj.title}"`;
+        headding.innerHTML = `Excercise ${ex}<br> <span>"${obj.title}"</span>`;
         headding.style.textAlign = 'center';
         el.appendChild(headding);
     const result = document.createElement('p');
